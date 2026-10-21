@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome Back to Aeris — Press Kit</title>
+<meta name="description" content="Press kit for Welcome Back to Aeris, a Frutiger Aero point-and-click psychological horror by Sunmint Lab.">
+<meta property="og:title" content="Welcome Back to Aeris — Press Kit">
+<meta property="og:description" content="A point-and-click psychological horror about reviving a 2000s-style minigame console shutting down in seven days.">
+<meta property="og:image" content="keyart/headercapsule.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="web/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#eef7fd;
+    --bg2:#ffffff;
+    --card:#ffffff;
+    --ink:#10243a;
+    --muted:#4f6a84;
+    --line:#cfe3f3;
+    --accent:#1f8fe5;
+    --accent-ink:#0b5fa8;
+    --sky1:#5fc3ff;
+    --sky2:#0f7ad6;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(15,80,140,.10);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;color:var(--ink);
+    background:#c9fbe9 url(web/bg.jpg) center top / cover fixed no-repeat;
+    font-family:Inter,"Noto Sans KR","Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  html[lang="ko"] body{font-family:"Noto Sans KR",Inter,-apple-system,sans-serif}
+  html[lang="ja"] body{font-family:"Noto Sans JP",Inter,-apple-system,sans-serif}
+  a{color:var(--accent-ink)}
+  img{max-width:100%;display:block}
+  h1,h2,h3{line-height:1.25;margin:0 0 .5em}
+  h2{font-size:1.55rem;font-weight:700;letter-spacing:-.01em}
+  h3{font-size:1.05rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  p{margin:0 0 1em}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+  /* top bar */
+  .bar{
+    position:sticky;top:0;z-index:20;background:rgba(255,255,255,.72);
+    backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:56px}
+  @media(max-width:480px){.brand span{display:none}}
+  .brand{font-weight:700;font-size:.95rem;letter-spacing:.01em;white-space:nowrap}
+  .brand span{color:var(--muted);font-weight:500}
+  nav.toc{display:none;gap:18px;font-size:.9rem}
+  nav.toc a{color:var(--muted);text-decoration:none}
+  nav.toc a:hover{color:var(--accent-ink)}
+  @media(min-width:900px){nav.toc{display:flex}}
+  .lang{display:flex;gap:4px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px}
+  .lang button{
+    border:0;background:transparent;color:var(--muted);font:inherit;font-size:.82rem;font-weight:600;
+    padding:5px 11px;border-radius:999px;cursor:pointer;white-space:nowrap
+  }
+  .lang{flex-shrink:0}
+  html[lang="ko"] body,html[lang="ja"] body{word-break:keep-all;overflow-wrap:anywhere}
+  .lang button[aria-pressed="true"]{background:var(--accent);color:#fff}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;color:var(--ink)}
+  .hero .wrap{position:relative;z-index:1;padding:56px 20px 48px;display:grid;gap:28px;align-items:center}
+  @media(min-width:860px){.hero .wrap{grid-template-columns:1.05fr 1fr;padding:72px 20px 64px}}
+  .hero img.logo{width:min(440px,100%);filter:drop-shadow(0 12px 24px rgba(0,40,90,.35))}
+  .hero .tag{font-size:1.15rem;font-weight:500;max-width:34ch;margin:18px 0 22px;color:#0b3f66}
+  .btns{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:.95rem;
+    padding:11px 18px;border-radius:999px;border:1px solid transparent;transition:transform .12s ease
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn.primary{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(31,143,229,.35)}
+  .btn.ghost{background:rgba(255,255,255,.7);color:var(--accent-ink);border-color:rgba(255,255,255,.9)}
+  .hero .shot{border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,60,90,.28);border:4px solid rgba(255,255,255,.9)}
+
+  /* sections */
+  section{padding:56px 0;border-bottom:1px solid rgba(255,255,255,.6)}
+  section:last-of-type{border-bottom:0}
+  .grid2{display:grid;gap:28px}
+  @media(min-width:860px){.grid2{grid-template-columns:320px 1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+
+  /* factsheet */
+  .fact{padding:22px 24px}
+  .fact dl{margin:0;font-size:.93rem}
+  .fact dt{color:var(--muted);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;margin-top:12px}
+  .fact dt:first-child{margin-top:0}
+  .fact dd{margin:1px 0 0}
+  .fact dd a{word-break:break-all}
+
+  .desc p{font-size:1.04rem;max-width:68ch}
+  .desc p:first-child{font-size:1.12rem}
+  .features{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+  @media(min-width:700px){.features{grid-template-columns:1fr 1fr}}
+  .features li{padding:18px 20px}
+  .features b{display:block;margin-bottom:4px;color:var(--accent-ink)}
+
+  /* media */
+  .video{position:relative;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:#0a1a2b;box-shadow:var(--shadow);border:4px solid rgba(255,255,255,.9)}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .video .placeholder{position:absolute;inset:0;display:grid;place-items:center;color:#9fc6e8;font-weight:500;text-align:center;padding:20px}
+  .sub{color:#2d4d6b;font-size:.92rem;margin-top:10px}
+  .gallery{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+  .gallery a{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+  .gallery img{aspect-ratio:16/9;object-fit:cover;width:100%;transition:transform .25s ease}
+  .gallery a:hover img{transform:scale(1.03)}
+  .gifs{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+  .gifs figure{margin:0;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+  .gifs img{width:100%}
+  .gifs figcaption{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;font-size:.88rem;color:var(--muted)}
+  .gifs figcaption a{text-decoration:none;font-weight:600}
+  .art{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));align-items:start}
+  .art a{display:block;padding:14px;text-align:center;font-size:.86rem;color:var(--muted);text-decoration:none}
+  .art a img{margin:0 auto 10px;border-radius:8px}
+  .art a .logo-bg{background:linear-gradient(180deg,#bfe6ff,#4fb0ef);border-radius:8px;padding:14px;margin-bottom:10px}
+  .art a .logo-bg img{margin:0 auto;border-radius:0}
+
+  .about p{max-width:68ch}
+  .contact{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .contact a{display:block;padding:18px 20px;text-decoration:none;color:inherit}
+  .contact a small{display:block;color:var(--muted);font-size:.82rem;margin-bottom:2px}
+  .contact a b{color:var(--accent-ink);word-break:break-all}
+
+  footer{padding:28px 0 48px;color:#2d4d6b;font-size:.85rem}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+
+  /* lightbox */
+  .lb{position:fixed;inset:0;background:rgba(5,15,30,.9);display:none;place-items:center;z-index:50;padding:20px;cursor:zoom-out}
+  .lb.open{display:grid}
+  .lb img{max-width:min(1600px,100%);max-height:90vh;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  .lb .hint{position:fixed;bottom:18px;left:0;right:0;text-align:center;color:#9fc6e8;font-size:.85rem}
+  .lb .hint a{color:#fff}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="brand">Welcome Back to Aeris <span>· Press Kit</span></div>
+    <nav class="toc">
+      <a href="#about" data-i18n="nav.about"></a>
+      <a href="#trailer" data-i18n="nav.trailer"></a>
+      <a href="#screens" data-i18n="nav.screens"></a>
+      <a href="#gifs" data-i18n="nav.gifs"></a>
+      <a href="#art" data-i18n="nav.art"></a>
+      <a href="#studio" data-i18n="nav.studio"></a>
+      <a href="#contact" data-i18n="nav.contact"></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
+      <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <img class="logo" src="web/logo.png" alt="Welcome Back to Aeris">
+      <p class="tag" data-i18n="hero.tag"></p>
+      <div class="btns">
+        <a class="btn primary" href="https://store.steampowered.com/app/4941720" target="_blank" rel="noopener" data-i18n="hero.steam"></a>
+        <a class="btn ghost" href="https://store.steampowered.com/app/5310170" target="_blank" rel="noopener" data-i18n="hero.demo"></a>
+        <a class="btn ghost" href="WelcomeBackToAeris_PressKit.zip" data-i18n="hero.zip"></a>
+      </div>
+    </div>
+    <a class="shot" href="screenshots/screenshot7.png" data-lb><img src="web/screenshot7.jpg" alt="Aeris home screen"></a>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <div class="wrap grid2">
+    <aside>
+      <h3 data-i18n="fact.title"></h3>
+      <div class="card fact">
+        <dl>
+          <dt data-i18n="fact.title_k"></dt><dd>Welcome Back to Aeris</dd>
+          <dt data-i18n="fact.dev"></dt><dd>Sunmint Lab</dd>
+          <dt data-i18n="fact.genre"></dt><dd data-i18n="fact.genre_v"></dd>
+          <dt data-i18n="fact.platform"></dt><dd>Steam — Windows / macOS</dd>
+          <dt data-i18n="fact.release"></dt><dd data-i18n="fact.release_v"></dd>
+          <dt data-i18n="fact.demo"></dt><dd data-i18n="fact.demo_v"></dd>
+          <dt data-i18n="fact.price"></dt><dd>USD $9.99</dd>
+          <dt data-i18n="fact.lang"></dt><dd data-i18n="fact.lang_v"></dd>
+          <dt data-i18n="fact.engine"></dt><dd>Unity 6</dd>
+          <dt>Steam</dt><dd><a href="https://store.steampowered.com/app/4941720" target="_blank" rel="noopener">store.steampowered.com/app/4941720</a></dd>
+          <dt data-i18n="fact.contact"></dt><dd><a href="mailto:sunmintlab@gmail.com">sunmintlab@gmail.com</a></dd>
+        </dl>
+      </div>
+    </aside>
+    <div>
+      <h3 data-i18n="desc.title"></h3>
+      <div class="desc">
+        <p data-i18n="desc.p1"></p>
+        <p data-i18n="desc.p2"></p>
+        <p data-i18n="desc.p3"></p>
+      </div>
+      <h3 style="margin-top:34px" data-i18n="feat.title"></h3>
+      <ul class="features">
+        <li class="card"><b data-i18n="feat.1h"></b><span data-i18n="feat.1b"></span></li>
+        <li class="card"><b data-i18n="feat.2h"></b><span data-i18n="feat.2b"></span></li>
+        <li class="card"><b data-i18n="feat.3h"></b><span data-i18n="feat.3b"></span></li>
+        <li class="card"><b data-i18n="feat.4h"></b><span data-i18n="feat.4b"></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="trailer">
+  <div class="wrap">
+    <h2 data-i18n="trailer.title"></h2>
+    <div class="video" id="videoBox">
+      <iframe src="https://www.youtube-nocookie.com/embed/lcik0WNmgAo" title="Welcome Back to Aeris — Demo Trailer" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p class="sub">
+      <a href="https://www.youtube.com/watch?v=lcik0WNmgAo" target="_blank" rel="noopener">YouTube ↗</a>
+      <!-- TRAILER FILE: 드라이브 링크 생기면 아래 주석 풀고 href 채우기
+      &nbsp;·&nbsp; <span data-i18n="trailer.dl"></span><a href="DRIVE_LINK" data-i18n="trailer.dl_link"></a>
+      -->
+    </p>
+  </div>
+</section>
+
+<section id="screens">
+  <div class="wrap">
+    <h2 data-i18n="screens.title"></h2>
+    <p class="sub" style="margin:-6px 0 18px" data-i18n="screens.sub"></p>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<section id="gifs">
+  <div class="wrap">
+    <h2 data-i18n="gifs.title"></h2>
+    <p class="sub" style="margin:-6px 0 18px" data-i18n="gifs.sub"></p>
+    <div class="gifs">
+      <figure><img src="gif/01_mora_wakeup.gif" alt="Mora wakes up" loading="lazy"><figcaption><span data-i18n="gifs.1"></span><a href="gif/01_mora_wakeup.gif" download>GIF ↓</a></figcaption></figure>
+      <figure><img src="gif/02_wait_zoomout.gif" alt="Wait! This place isn't dead" loading="lazy"><figcaption><span data-i18n="gifs.2"></span><a href="gif/02_wait_zoomout.gif" download>GIF ↓</a></figcaption></figure>
+      <figure><img src="gif/03_trash_cleanup.gif" alt="Cleaning up the home screen" loading="lazy"><figcaption><span data-i18n="gifs.3"></span><a href="gif/03_trash_cleanup.gif" download>GIF ↓</a></figcaption></figure>
+      <figure><img src="gif/04_popup_storm.gif" alt="Popup storm" loading="lazy"><figcaption><span data-i18n="gifs.4"></span><a href="gif/04_popup_storm.gif" download>GIF ↓</a></figcaption></figure>
+      <figure><img src="gif/05_dislike_hover.gif" alt="That's not an option" loading="lazy"><figcaption><span data-i18n="gifs.5"></span><a href="gif/05_dislike_hover.gif" download>GIF ↓</a></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="art">
+  <div class="wrap">
+    <h2 data-i18n="art.title"></h2>
+    <div class="art">
+      <a class="card" href="logo/logofinal.png" download><div class="logo-bg"><img src="web/logo.png" alt="Logo"></div><span data-i18n="art.logo"></span><br>PNG · 1280×960</a>
+      <a class="card" href="keyart/headercapsule.png" download><img src="web/headercapsule.jpg" alt="Header capsule"><span data-i18n="art.header"></span><br>PNG · 920×430</a>
+      <a class="card" href="keyart/librarycapsule.png" download><img src="web/librarycapsule.jpg" alt="Library capsule" style="max-height:260px;width:auto"><span data-i18n="art.library"></span><br>PNG · 600×900</a>
+    </div>
+  </div>
+</section>
+
+<section id="studio">
+  <div class="wrap grid2">
+    <aside><h3 data-i18n="studio.title"></h3></aside>
+    <div class="about">
+      <h2>Sunmint Lab</h2>
+      <p data-i18n="studio.p1"></p>
+      <p data-i18n="studio.p2"></p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2 data-i18n="contact.title"></h2>
+    <div class="contact">
+      <a class="card" href="mailto:sunmintlab@gmail.com"><small data-i18n="contact.press"></small><b>sunmintlab@gmail.com</b></a>
+      <a class="card" href="https://store.steampowered.com/app/4941720" target="_blank" rel="noopener"><small>Steam</small><b>Welcome Back to Aeris</b></a>
+      <a class="card" href="https://store.steampowered.com/app/5310170" target="_blank" rel="noopener"><small data-i18n="contact.demo"></small><b>Steam Demo</b></a>
+      <a class="card" href="https://x.com/SunmintLab" target="_blank" rel="noopener"><small>X / Twitter</small><b>@SunmintLab</b></a>
+    </div>
+    <p class="sub" data-i18n="contact.permission"></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Sunmint Lab. <span data-i18n="footer.rights"></span></span>
+    <span data-i18n="footer.music"></span>
+  </div>
+</footer>
+
+<div class="lb" id="lb" aria-hidden="true">
+  <img id="lbImg" alt="">
+  <div class="hint"><a id="lbDl" href="#" download data-i18n="lb.dl"></a></div>
+</div>
+
+<script>
+const I18N = {
+  en: {
+    "nav.about":"About","nav.trailer":"Trailer","nav.screens":"Screenshots","nav.gifs":"GIFs","nav.art":"Logo & Key Art","nav.studio":"Studio","nav.contact":"Contact",
+    "hero.tag":"A point-and-click psychological horror about reviving a 2000s-style minigame console shutting down in seven days.",
+    "hero.steam":"Steam page","hero.demo":"Play the demo","hero.zip":"Download all assets (.zip)",
+    "fact.title":"Factsheet","fact.title_k":"Title","fact.dev":"Developer / Publisher","fact.genre":"Genre","fact.genre_v":"Point-and-click psychological horror",
+    "fact.platform":"Platform","fact.release":"Release","fact.release_v":"November 2026","fact.demo":"Demo","fact.demo_v":"Available now on Steam (Steam Next Fest, Oct 2026)",
+    "fact.price":"Price","fact.lang":"Languages","fact.lang_v":"English, Korean, Japanese, Simplified Chinese, Traditional Chinese, Spanish (Spain), Portuguese (Brazil), Russian",
+    "fact.engine":"Engine","fact.contact":"Press contact",
+    "desc.title":"Description",
+    "desc.p1":"Welcome Back to Aeris is a point-and-click psychological horror game about reviving Aeris, a 2000s-style minigame console set to shut down in seven days. Returning to Aeris after a long absence, players reunite with Mora, the console's guide character, and set out to stop the shutdown by restoring one offline minigame channel each day.",
+    "desc.p2":"Aeris is built in the distinctive aesthetic of Frutiger Aero — blue skies, a soft sheen, and glossy 3D interfaces. Players pop bubbles, play melodies on flowers, draw their own fish and release them into an aquarium, and explore a range of other minigames. But with every channel restored, inexplicable traces begin to surface across screens that once looked perfectly ordinary, and the bright, friendly space gradually becomes strangely unfamiliar. The contrast between its cheerful visuals and the unease slowly seeping beneath the surface is at the heart of the game.",
+    "desc.p3":"Developed by indie studio Sunmint Lab, Welcome Back to Aeris is set to launch on Steam for Windows and macOS in November 2026, with support for eight languages.",
+    "feat.title":"Key features",
+    "feat.1h":"Seven days until shutdown","feat.1b":"Bring Aeris's offline channels back to life with Mora before time runs out. What could be lurking inside after all these years of neglect?",
+    "feat.2h":"Aeris-exclusive minigame channels","feat.2b":"Pop bubbles, play melodies with flowers, fill an aquarium with fish you draw yourself, and discover even more minigames.",
+    "feat.3h":"Something beyond the screen","feat.3b":"As you restore each channel, strange signs begin to appear where everything once seemed ordinary.",
+    "feat.4h":"Frutiger Aero visuals","feat.4b":"Explore the world of Aeris, brought to life with blue skies, lush green landscapes, crystal-clear icons, and glossy 3D interfaces.",
+    "trailer.title":"Trailer","trailer.soon":"Demo trailer coming soon","trailer.dl":"Need the file? ","trailer.dl_link":"Download the trailer (1080p MP4)",
+    "screens.title":"Screenshots","screens.sub":"Click to enlarge. Originals are 1920×1080 or larger — download all with the zip above.",
+    "gifs.title":"GIFs","gifs.sub":"960px, free to embed. MP4 versions of the same clips are included in the zip.",
+    "gifs.1":"Mora wakes up","gifs.2":"\"This place isn't dead!\"","gifs.3":"Cleaning up the home screen","gifs.4":"Popup storm","gifs.5":"\"That's not an option.\"",
+    "art.title":"Logo & key art","art.logo":"Logo (transparent)","art.header":"Header capsule","art.library":"Library capsule",
+    "studio.title":"About the studio",
+    "studio.p1":"Sunmint Lab is a one-person indie game studio based in Korea. Narrative, art, design and direction are all handled by its sole developer.",
+    "studio.p2":"Welcome Back to Aeris is the studio's first game.",
+    "contact.title":"Contact","contact.press":"Press & business","contact.demo":"Demo",
+    "contact.permission":"All assets on this page may be freely used for coverage of Welcome Back to Aeris. Monetized videos and streams of the game are welcome.",
+    "footer.rights":"All rights reserved.","footer.music":"Music by 오누레 (Onure).",
+    "lb.dl":"Download original ↓"
+  },
+  ko: {
+    "nav.about":"소개","nav.trailer":"트레일러","nav.screens":"스크린샷","nav.gifs":"GIF","nav.art":"로고·키아트","nav.studio":"스튜디오","nav.contact":"연락처",
+    "hero.tag":"7일 뒤 서비스가 종료되는 2000년대풍 미니게임 콘솔을 되살리는 포인트 앤 클릭 심리 호러.",
+    "hero.steam":"Steam 페이지","hero.demo":"데모 플레이","hero.zip":"에셋 전체 다운로드 (.zip)",
+    "fact.title":"팩트시트","fact.title_k":"게임명","fact.dev":"개발 / 배급","fact.genre":"장르","fact.genre_v":"포인트 앤 클릭 심리 호러",
+    "fact.platform":"플랫폼","fact.release":"출시","fact.release_v":"2026년 11월","fact.demo":"데모","fact.demo_v":"Steam에서 플레이 가능 (Steam 넥스트 페스트 2026년 10월)",
+    "fact.price":"가격","fact.lang":"지원 언어","fact.lang_v":"한국어, 영어, 일본어, 중국어 간체, 중국어 번체, 스페인어(스페인), 포르투갈어(브라질), 러시아어",
+    "fact.engine":"엔진","fact.contact":"프레스 문의",
+    "desc.title":"게임 소개",
+    "desc.p1":"《Welcome Back to Aeris》는 7일 뒤 서비스가 종료되는 2000년대풍 미니게임 콘솔 ‘Aeris’를 되살리는 포인트 앤 클릭 심리 호러 게임입니다. 플레이어는 오랜만에 접속한 Aeris에서 가이드 캐릭터 Mora를 다시 만나고, 매일 하나씩 꺼진 미니게임 채널을 복구하며 서비스 종료를 막으려 합니다.",
+    "desc.p2":"게임의 무대인 Aeris는 푸른 하늘과 부드러운 광택, 입체적인 UI 등 Frutiger Aero 특유의 미학으로 꾸며져 있습니다. 플레이어는 버블을 터뜨리고, 꽃으로 멜로디를 연주하고, 직접 그린 물고기를 수족관에 넣는 등 다양한 미니게임을 즐길 수 있습니다. 그러나 채널을 하나씩 복구할수록 평범해 보이던 화면 곳곳에서 설명할 수 없는 이상한 흔적들이 발견되고, 밝고 친근했던 공간은 점차 낯선 모습을 드러냅니다. 산뜻한 비주얼과 그 이면에 서서히 스며드는 불안감의 대비가 이 게임의 핵심입니다.",
+    "desc.p3":"인디게임 스튜디오 Sunmint Lab이 개발한 이 작품은 2026년 11월 Steam을 통해 Windows와 macOS로 출시될 예정이며, 총 8개 언어를 지원합니다.",
+    "feat.title":"주요 특징",
+    "feat.1h":"서비스 종료까지 7일","feat.1b":"매일 Mora와 함께 꺼진 채널을 하나씩 되살리세요. 오랫동안 방치된 그 안에는 무엇이 남아 있을까요?",
+    "feat.2h":"Aeris만의 미니게임 채널","feat.2b":"버블을 터뜨리고, 꽃으로 멜로디를 연주하고, 직접 그린 물고기로 아쿠아리움을 꾸미는 등 다양한 미니게임을 즐겨보세요.",
+    "feat.3h":"화면 너머의 무언가","feat.3b":"채널을 하나씩 복구할수록, 평범해 보이던 화면 속에서 낯선 흔적이 발견됩니다.",
+    "feat.4h":"프루티거 에어로 비주얼","feat.4b":"푸른 하늘과 초록빛 풍경, 맑게 빛나는 아이콘과 입체적인 UI로 완성된 Aeris를 둘러보세요.",
+    "trailer.title":"트레일러","trailer.soon":"데모 트레일러 공개 예정","trailer.dl":"원본 파일이 필요하신가요? ","trailer.dl_link":"트레일러 다운로드 (1080p MP4)",
+    "screens.title":"스크린샷","screens.sub":"클릭하면 크게 볼 수 있습니다. 원본은 1920×1080 이상이며, 위의 zip으로 한 번에 받을 수 있습니다.",
+    "gifs.title":"GIF","gifs.sub":"960px, 자유롭게 삽입하셔도 됩니다. 같은 클립의 MP4 버전은 zip에 포함되어 있습니다.",
+    "gifs.1":"잠에서 깨는 Mora","gifs.2":"“망한 거 아니니까 나가지 마!!”","gifs.3":"홈 화면 청소","gifs.4":"팝업 폭탄","gifs.5":"“그런 선택지는 없어~”",
+    "art.title":"로고 · 키아트","art.logo":"로고 (투명 배경)","art.header":"헤더 캡슐","art.library":"라이브러리 캡슐",
+    "studio.title":"스튜디오 소개",
+    "studio.p1":"Sunmint Lab은 한국의 1인 인디게임 스튜디오입니다. 시나리오, 아트, 디자인, 디렉션을 모두 개발자 한 명이 직접 맡고 있습니다.",
+    "studio.p2":"《Welcome Back to Aeris》는 스튜디오의 첫 작품입니다.",
+    "contact.title":"연락처","contact.press":"프레스 · 비즈니스","contact.demo":"데모",
+    "contact.permission":"이 페이지의 모든 에셋은 《Welcome Back to Aeris》 관련 보도에 자유롭게 사용하실 수 있습니다. 게임 영상·방송의 수익 창출도 환영합니다.",
+    "footer.rights":"All rights reserved.","footer.music":"음악: 오누레",
+    "lb.dl":"원본 다운로드 ↓"
+  },
+  ja: {
+    "nav.about":"紹介","nav.trailer":"トレーラー","nav.screens":"スクリーンショット","nav.gifs":"GIF","nav.art":"ロゴ・キーアート","nav.studio":"スタジオ","nav.contact":"お問い合わせ",
+    "hero.tag":"7日後にサービス終了を迎える2000年代風のミニゲーム機を蘇らせる、ポイント＆クリック型サイコロジカルホラー。",
+    "hero.steam":"Steamページ","hero.demo":"体験版をプレイ","hero.zip":"全素材をダウンロード (.zip)",
+    "fact.title":"ファクトシート","fact.title_k":"タイトル","fact.dev":"開発 / パブリッシャー","fact.genre":"ジャンル","fact.genre_v":"ポイント＆クリック型サイコロジカルホラー",
+    "fact.platform":"プラットフォーム","fact.release":"配信","fact.release_v":"2026年11月","fact.demo":"体験版","fact.demo_v":"Steamにて配信中（Steam Next Fest 2026年10月）",
+    "fact.price":"価格","fact.lang":"対応言語","fact.lang_v":"日本語、英語、韓国語、簡体字中国語、繁体字中国語、スペイン語（スペイン）、ポルトガル語（ブラジル）、ロシア語",
+    "fact.engine":"エンジン","fact.contact":"プレス連絡先",
+    "desc.title":"ゲーム紹介",
+    "desc.p1":"『Welcome Back to Aeris』は、7日後にサービス終了を迎える2000年代風のミニゲーム機「Aeris」を蘇らせるポイント＆クリック型のサイコロジカルホラーゲームです。久しぶりにAerisへ接続したプレイヤーは、ガイドキャラクターのMoraと再会し、停止しているミニゲームチャンネルを1日ひとつずつ復旧しながら、サービス終了を食い止めようとします。",
+    "desc.p2":"舞台となるAerisは、青い空ややわらかな光沢、立体的なUIなど、Frutiger Aero特有のデザインで彩られています。プレイヤーはバブルを割ったり、花でメロディーを奏でたり、自分で描いた魚をアクアリウムに放したりと、さまざまなミニゲームを楽しめます。しかしチャンネルを復旧していくにつれ、それまで何の変哲もなかった画面のあちこちに説明のつかない奇妙な痕跡が見つかり、明るく親しみやすかった空間は次第に見慣れない一面をのぞかせ始めます。さわやかなビジュアルと、その裏にじわじわと広がる不安感。この対比こそが本作の核心です。",
+    "desc.p3":"インディーゲームスタジオSunmint Labが開発した本作は、2026年11月にSteamにてWindows / macOS向けに配信予定。日本語を含む全8言語に対応します。",
+    "feat.title":"主な特徴",
+    "feat.1h":"サービス終了まであと7日","feat.1b":"毎日Moraと一緒に、オフラインになったチャンネルをひとつずつ蘇らせましょう。長い間放置されていたその中には、何が残されているのでしょうか？",
+    "feat.2h":"Aerisだけのミニゲームチャンネル","feat.2b":"バブルを割り、花でメロディーを奏で、自分で描いた魚でアクアリウムを飾るなど、さまざまなミニゲームを楽しみましょう。",
+    "feat.3h":"画面の向こうの何か","feat.3b":"チャンネルをひとつずつ復旧するにつれ、何気ない画面の中に見慣れない痕跡が現れ始めます。",
+    "feat.4h":"Frutiger Aeroのビジュアル","feat.4b":"青空と緑豊かな風景、澄んだ輝きを放つアイコン、立体的なUIで彩られたAerisの世界を探索しましょう。",
+    "trailer.title":"トレーラー","trailer.soon":"デモトレーラー近日公開","trailer.dl":"動画ファイルが必要な場合： ","trailer.dl_link":"トレーラーをダウンロード (1080p MP4)",
+    "screens.title":"スクリーンショット","screens.sub":"クリックで拡大。オリジナルは1920×1080以上で、上のzipからまとめてダウンロードできます。",
+    "gifs.title":"GIF","gifs.sub":"960px、自由に埋め込んでいただけます。同じクリップのMP4版はzipに同梱しています。",
+    "gifs.1":"目を覚ますMora","gifs.2":"「ここ、終わってないから出てかないで！！」","gifs.3":"ホーム画面のお掃除","gifs.4":"ポップアップの嵐","gifs.5":"「そんな選択肢はないよ〜」",
+    "art.title":"ロゴ・キーアート","art.logo":"ロゴ（透過）","art.header":"ヘッダーカプセル","art.library":"ライブラリカプセル",
+    "studio.title":"スタジオについて",
+    "studio.p1":"Sunmint Labは韓国の個人インディーゲームスタジオです。シナリオ、アート、デザイン、ディレクションのすべてを開発者ひとりで手がけています。",
+    "studio.p2":"『Welcome Back to Aeris』はスタジオ初の作品です。",
+    "contact.title":"お問い合わせ","contact.press":"プレス・ビジネス","contact.demo":"体験版",
+    "contact.permission":"このページの素材は『Welcome Back to Aeris』の記事・紹介に自由にご利用いただけます。ゲームの収益化動画・配信も歓迎します。",
+    "footer.rights":"All rights reserved.","footer.music":"音楽：オヌレ (Onure)",
+    "lb.dl":"オリジナルをダウンロード ↓"
+  }
+};
+
+function setLang(l){
+  const d = I18N[l] || I18N.en;
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{ const k=el.dataset.i18n; if(d[k]!=null) el.textContent=d[k]; });
+  document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.lang===l)));
+  try{ localStorage.setItem('wbta-lang', l); }catch(e){}
+}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+(function(){
+  let l='en';
+  try{ l = localStorage.getItem('wbta-lang') || l; }catch(e){}
+  const q = new URLSearchParams(location.search).get('lang'); if(q && I18N[q]) l=q;
+  if(!new URLSearchParams(location.search).get('lang') && !safeGet('wbta-lang')){
+    const nav=(navigator.language||'').toLowerCase();
+    if(nav.startsWith('ko')) l='ko'; else if(nav.startsWith('ja')) l='ja';
+  }
+  setLang(l);
+  function safeGet(k){ try{return localStorage.getItem(k);}catch(e){return null;} }
+})();
+
+// gallery
+const g=document.getElementById('gallery');
+for(let i=1;i<=11;i++){
+  const a=document.createElement('a'); a.href=`screenshots/screenshot${i}.png`; a.dataset.lb='';
+  a.innerHTML=`<img src="web/screenshot${i}.jpg" alt="Screenshot ${i}" loading="lazy">`;
+  g.appendChild(a);
+}
+// lightbox
+const lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbDl=document.getElementById('lbDl');
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a[data-lb]'); if(!a) return;
+  e.preventDefault(); lbImg.src=a.href; lbDl.href=a.href; lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
+});
+lb.addEventListener('click',e=>{ if(e.target.closest('#lbDl')) return; lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); lbImg.src=''; });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); } });
+</script>
+</body>
+</html>
