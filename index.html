@@ -7,7 +7,7 @@
 <meta name="description" content="Press kit for Welcome Back to Aeris, a Frutiger Aero point-and-click psychological horror by Sunmint Lab.">
 <meta property="og:title" content="Welcome Back to Aeris — Press Kit">
 <meta property="og:description" content="A point-and-click psychological horror about reviving a 2000s-style minigame console shutting down in seven days.">
-<meta property="og:image" content="keyart/headercapsule.png">
+<meta property="og:image" content="https://sunmintlab.github.io/aeris-presskit/keyart/headercapsule.png">
 <meta property="og:type" content="website">
 <link rel="icon" href="web/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,7 +66,8 @@
     padding:5px 11px;border-radius:999px;cursor:pointer;white-space:nowrap
   }
   .lang{flex-shrink:0}
-  html[lang="ko"] body,html[lang="ja"] body{word-break:keep-all;overflow-wrap:anywhere}
+  html[lang="ko"] body{word-break:keep-all;overflow-wrap:break-word}
+  nav.toc a{white-space:nowrap}
   .lang button[aria-pressed="true"]{background:var(--accent);color:#fff}
 
   /* hero */
@@ -174,7 +175,7 @@
       <div class="btns">
         <a class="btn primary" href="https://store.steampowered.com/app/4941720" target="_blank" rel="noopener" data-i18n="hero.steam"></a>
         <a class="btn ghost" href="https://store.steampowered.com/app/5310170" target="_blank" rel="noopener" data-i18n="hero.demo"></a>
-        <a class="btn ghost" href="WelcomeBackToAeris_PressKit.zip" data-i18n="hero.zip"></a>
+        <a class="btn ghost" href="https://github.com/sunmintlab/aeris-presskit/releases/download/v1/WelcomeBackToAeris_PressKit.zip" data-i18n="hero.zip"></a>
       </div>
     </div>
     <a class="shot" href="screenshots/screenshot7.png" data-lb><img src="web/screenshot7.jpg" alt="Aeris home screen"></a>
@@ -194,7 +195,7 @@
           <dt data-i18n="fact.platform"></dt><dd>Steam — Windows / macOS</dd>
           <dt data-i18n="fact.release"></dt><dd data-i18n="fact.release_v"></dd>
           <dt data-i18n="fact.demo"></dt><dd data-i18n="fact.demo_v"></dd>
-          <dt data-i18n="fact.price"></dt><dd>USD $9.99</dd>
+          <dt data-i18n="fact.price"></dt><dd data-i18n="fact.price_v"></dd>
           <dt data-i18n="fact.lang"></dt><dd data-i18n="fact.lang_v"></dd>
           <dt data-i18n="fact.engine"></dt><dd>Unity 6</dd>
           <dt>Steam</dt><dd><a href="https://store.steampowered.com/app/4941720" target="_blank" rel="noopener">store.steampowered.com/app/4941720</a></dd>
@@ -274,7 +275,6 @@
     <div class="about">
       <h2>Sunmint Lab</h2>
       <p data-i18n="studio.p1"></p>
-      <p data-i18n="studio.p2"></p>
     </div>
   </div>
 </section>
@@ -313,7 +313,7 @@ const I18N = {
     "hero.steam":"Steam page","hero.demo":"Play the demo","hero.zip":"Download all assets (.zip)",
     "fact.title":"Factsheet","fact.title_k":"Title","fact.dev":"Developer / Publisher","fact.genre":"Genre","fact.genre_v":"Point-and-click psychological horror",
     "fact.platform":"Platform","fact.release":"Release","fact.release_v":"November 2026","fact.demo":"Demo","fact.demo_v":"Available now on Steam (Steam Next Fest, Oct 2026)",
-    "fact.price":"Price","fact.lang":"Languages","fact.lang_v":"English, Korean, Japanese, Simplified Chinese, Traditional Chinese, Spanish (Spain), Portuguese (Brazil), Russian",
+    "fact.price":"Price","fact.price_v":"TBA","fact.lang":"Languages","fact.lang_v":"English, Korean, Japanese, Simplified Chinese, Traditional Chinese, Spanish (Spain), Portuguese (Brazil), Russian",
     "fact.engine":"Engine","fact.contact":"Press contact",
     "desc.title":"Description",
     "desc.p1":"Welcome Back to Aeris is a point-and-click psychological horror game about reviving Aeris, a 2000s-style minigame console set to shut down in seven days. Returning to Aeris after a long absence, players reunite with Mora, the console's guide character, and set out to stop the shutdown by restoring one offline minigame channel each day.",
@@ -331,8 +331,7 @@ const I18N = {
     "art.title":"Logo & key art","art.logo":"Logo (transparent)","art.header":"Header capsule","art.library":"Library capsule",
     "studio.title":"About the studio",
     "studio.p1":"Sunmint Lab is a one-person indie game studio based in Korea. Narrative, art, design and direction are all handled by its sole developer.",
-    "studio.p2":"Welcome Back to Aeris is the studio's first game.",
-    "contact.title":"Contact","contact.press":"Press & business","contact.demo":"Demo",
+        "contact.title":"Contact","contact.press":"Press & business","contact.demo":"Demo",
     "contact.permission":"All assets on this page may be freely used for coverage of Welcome Back to Aeris. Monetized videos and streams of the game are welcome.",
     "footer.rights":"All rights reserved.","footer.music":"Music by 오누레 (Onure).",
     "lb.dl":"Download original ↓"
@@ -343,7 +342,7 @@ const I18N = {
     "hero.steam":"Steam 페이지","hero.demo":"데모 플레이","hero.zip":"에셋 전체 다운로드 (.zip)",
     "fact.title":"팩트시트","fact.title_k":"게임명","fact.dev":"개발 / 배급","fact.genre":"장르","fact.genre_v":"포인트 앤 클릭 심리 호러",
     "fact.platform":"플랫폼","fact.release":"출시","fact.release_v":"2026년 11월","fact.demo":"데모","fact.demo_v":"Steam에서 플레이 가능 (Steam 넥스트 페스트 2026년 10월)",
-    "fact.price":"가격","fact.lang":"지원 언어","fact.lang_v":"한국어, 영어, 일본어, 중국어 간체, 중국어 번체, 스페인어(스페인), 포르투갈어(브라질), 러시아어",
+    "fact.price":"가격","fact.price_v":"미정","fact.lang":"지원 언어","fact.lang_v":"한국어, 영어, 일본어, 중국어 간체, 중국어 번체, 스페인어(스페인), 포르투갈어(브라질), 러시아어",
     "fact.engine":"엔진","fact.contact":"프레스 문의",
     "desc.title":"게임 소개",
     "desc.p1":"《Welcome Back to Aeris》는 7일 뒤 서비스가 종료되는 2000년대풍 미니게임 콘솔 ‘Aeris’를 되살리는 포인트 앤 클릭 심리 호러 게임입니다. 플레이어는 오랜만에 접속한 Aeris에서 가이드 캐릭터 Mora를 다시 만나고, 매일 하나씩 꺼진 미니게임 채널을 복구하며 서비스 종료를 막으려 합니다.",
@@ -361,8 +360,7 @@ const I18N = {
     "art.title":"로고 · 키아트","art.logo":"로고 (투명 배경)","art.header":"헤더 캡슐","art.library":"라이브러리 캡슐",
     "studio.title":"스튜디오 소개",
     "studio.p1":"Sunmint Lab은 한국의 1인 인디게임 스튜디오입니다. 시나리오, 아트, 디자인, 디렉션을 모두 개발자 한 명이 직접 맡고 있습니다.",
-    "studio.p2":"《Welcome Back to Aeris》는 스튜디오의 첫 작품입니다.",
-    "contact.title":"연락처","contact.press":"프레스 · 비즈니스","contact.demo":"데모",
+        "contact.title":"연락처","contact.press":"프레스 · 비즈니스","contact.demo":"데모",
     "contact.permission":"이 페이지의 모든 에셋은 《Welcome Back to Aeris》 관련 보도에 자유롭게 사용하실 수 있습니다. 게임 영상·방송의 수익 창출도 환영합니다.",
     "footer.rights":"All rights reserved.","footer.music":"음악: 오누레",
     "lb.dl":"원본 다운로드 ↓"
@@ -373,7 +371,7 @@ const I18N = {
     "hero.steam":"Steamページ","hero.demo":"体験版をプレイ","hero.zip":"全素材をダウンロード (.zip)",
     "fact.title":"ファクトシート","fact.title_k":"タイトル","fact.dev":"開発 / パブリッシャー","fact.genre":"ジャンル","fact.genre_v":"ポイント＆クリック型サイコロジカルホラー",
     "fact.platform":"プラットフォーム","fact.release":"配信","fact.release_v":"2026年11月","fact.demo":"体験版","fact.demo_v":"Steamにて配信中（Steam Next Fest 2026年10月）",
-    "fact.price":"価格","fact.lang":"対応言語","fact.lang_v":"日本語、英語、韓国語、簡体字中国語、繁体字中国語、スペイン語（スペイン）、ポルトガル語（ブラジル）、ロシア語",
+    "fact.price":"価格","fact.price_v":"未定","fact.lang":"対応言語","fact.lang_v":"日本語、英語、韓国語、簡体字中国語、繁体字中国語、スペイン語（スペイン）、ポルトガル語（ブラジル）、ロシア語",
     "fact.engine":"エンジン","fact.contact":"プレス連絡先",
     "desc.title":"ゲーム紹介",
     "desc.p1":"『Welcome Back to Aeris』は、7日後にサービス終了を迎える2000年代風のミニゲーム機「Aeris」を蘇らせるポイント＆クリック型のサイコロジカルホラーゲームです。久しぶりにAerisへ接続したプレイヤーは、ガイドキャラクターのMoraと再会し、停止しているミニゲームチャンネルを1日ひとつずつ復旧しながら、サービス終了を食い止めようとします。",
@@ -387,12 +385,11 @@ const I18N = {
     "trailer.title":"トレーラー","trailer.soon":"デモトレーラー近日公開","trailer.dl":"動画ファイルが必要な場合： ","trailer.dl_link":"トレーラーをダウンロード (1080p MP4)",
     "screens.title":"スクリーンショット","screens.sub":"クリックで拡大。オリジナルは1920×1080以上で、上のzipからまとめてダウンロードできます。",
     "gifs.title":"GIF","gifs.sub":"960px、自由に埋め込んでいただけます。同じクリップのMP4版はzipに同梱しています。",
-    "gifs.1":"目を覚ますMora","gifs.2":"「ここ、終わってないから出てかないで！！」","gifs.3":"ホーム画面のお掃除","gifs.4":"ポップアップの嵐","gifs.5":"「そんな選択肢はないよ〜」",
+    "gifs.1":"目を覚ますMora","gifs.2":"「つぶれてないから、帰らないで！！」","gifs.3":"ホーム画面のお掃除","gifs.4":"ポップアップの嵐","gifs.5":"「そんな選択肢はないよ〜」",
     "art.title":"ロゴ・キーアート","art.logo":"ロゴ（透過）","art.header":"ヘッダーカプセル","art.library":"ライブラリカプセル",
     "studio.title":"スタジオについて",
     "studio.p1":"Sunmint Labは韓国の個人インディーゲームスタジオです。シナリオ、アート、デザイン、ディレクションのすべてを開発者ひとりで手がけています。",
-    "studio.p2":"『Welcome Back to Aeris』はスタジオ初の作品です。",
-    "contact.title":"お問い合わせ","contact.press":"プレス・ビジネス","contact.demo":"体験版",
+        "contact.title":"お問い合わせ","contact.press":"プレス・ビジネス","contact.demo":"体験版",
     "contact.permission":"このページの素材は『Welcome Back to Aeris』の記事・紹介に自由にご利用いただけます。ゲームの収益化動画・配信も歓迎します。",
     "footer.rights":"All rights reserved.","footer.music":"音楽：オヌレ (Onure)",
     "lb.dl":"オリジナルをダウンロード ↓"
