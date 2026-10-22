@@ -225,13 +225,11 @@
   <div class="wrap">
     <h2 data-i18n="trailer.title"></h2>
     <div class="video" id="videoBox">
-      <iframe src="https://www.youtube-nocookie.com/embed/lcik0WNmgAo" title="Welcome Back to Aeris — Demo Trailer" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube-nocookie.com/embed/Cp7aC_F0cw4" title="Welcome Back to Aeris — Demo Trailer" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p class="sub">
-      <a href="https://www.youtube.com/watch?v=lcik0WNmgAo" target="_blank" rel="noopener">YouTube ↗</a>
-      <!-- TRAILER FILE: 드라이브 링크 생기면 아래 주석 풀고 href 채우기
-      &nbsp;·&nbsp; <span data-i18n="trailer.dl"></span><a href="DRIVE_LINK" data-i18n="trailer.dl_link"></a>
-      -->
+      <a href="https://www.youtube.com/watch?v=Cp7aC_F0cw4" target="_blank" rel="noopener">YouTube ↗</a>
+      &nbsp;·&nbsp; <span data-i18n="trailer.dl"></span><a href="trailer/WelcomeBackToAeris_DemoTrailer_EN.mp4" download data-i18n="trailer.dl_link"></a>
     </p>
   </div>
 </section>
@@ -261,10 +259,13 @@
 <section id="art">
   <div class="wrap">
     <h2 data-i18n="art.title"></h2>
+    <p class="sub" style="margin:-6px 0 18px" data-i18n="art.note"></p>
     <div class="art">
-      <a class="card" href="logo/logofinal.png" download><div class="logo-bg"><img src="web/logo.png" alt="Logo"></div><span data-i18n="art.logo"></span><br>PNG · 1280×960</a>
+      <a class="card" href="logo/logofinal.png" download><div class="logo-bg"><img src="web/logo.png" alt="Logo"></div><span data-i18n="art.logo"></span><br>PNG · 1280×910</a>
       <a class="card" href="keyart/headercapsule.png" download><img src="web/headercapsule.jpg" alt="Header capsule"><span data-i18n="art.header"></span><br>PNG · 920×430</a>
-      <a class="card" href="keyart/librarycapsule.png" download><img src="web/librarycapsule.jpg" alt="Library capsule" style="max-height:260px;width:auto"><span data-i18n="art.library"></span><br>PNG · 600×900</a>
+      <a class="card" href="keyart/maincapsule.png" download><img src="web/maincapsule.jpg" alt="Main capsule"><span data-i18n="art.main"></span><br>PNG · 1232×706</a>
+      <a class="card" href="keyart/youtubethumb.png" download><img src="web/youtubethumb.jpg" alt="16:9 key art"><span data-i18n="art.yt"></span><br>PNG · 1920×1080</a>
+      <a class="card" href="keyart/verticalcapsule.png" download><img src="web/verticalcapsule.jpg" alt="Vertical capsule" style="max-height:260px;width:auto"><span data-i18n="art.vertical"></span><br>PNG · 748×896</a>
     </div>
   </div>
 </section>
@@ -328,7 +329,7 @@ const I18N = {
     "screens.title":"Screenshots","screens.sub":"Click to enlarge. Originals are 1920×1080 or larger — download all with the zip above.",
     "gifs.title":"GIFs","gifs.sub":"960px, free to embed. MP4 versions of the same clips are included in the zip.",
     "gifs.1":"Mora wakes up","gifs.2":"\"This place isn't dead!\"","gifs.3":"Cleaning up the home screen","gifs.4":"Popup storm","gifs.5":"\"That's not an option.\"",
-    "art.title":"Logo & key art","art.logo":"Logo (transparent)","art.header":"Header capsule","art.library":"Library capsule",
+    "art.title":"Logo & key art","art.logo":"Logo (transparent)","art.header":"Header capsule","art.main":"Main capsule","art.yt":"16:9 key art (thumbnail)","art.vertical":"Vertical capsule","art.note":"All key art is free to use. If you're deciding which one to run, we'd love it if you went with the header capsule (the panicked one).",
     "studio.title":"About the studio",
     "studio.p1":"Sunmint Lab is a one-person indie game studio based in Korea. Narrative, art, design and direction are all handled by its sole developer.",
         "contact.title":"Contact","contact.press":"Press & business","contact.demo":"Demo",
@@ -357,7 +358,7 @@ const I18N = {
     "screens.title":"스크린샷","screens.sub":"클릭하면 크게 볼 수 있습니다. 원본은 1920×1080 이상이며, 위의 zip으로 한 번에 받을 수 있습니다.",
     "gifs.title":"GIF","gifs.sub":"960px, 자유롭게 삽입하셔도 됩니다. 같은 클립의 MP4 버전은 zip에 포함되어 있습니다.",
     "gifs.1":"잠에서 깨는 Mora","gifs.2":"“망한 거 아니니까 나가지 마!!”","gifs.3":"홈 화면 청소","gifs.4":"팝업 폭탄","gifs.5":"“그런 선택지는 없어~”",
-    "art.title":"로고 · 키아트","art.logo":"로고 (투명 배경)","art.header":"헤더 캡슐","art.library":"라이브러리 캡슐",
+    "art.title":"로고 · 키아트","art.logo":"로고 (투명 배경)","art.header":"헤더 캡슐","art.main":"메인 캡슐","art.yt":"16:9 키아트 (썸네일용)","art.vertical":"세로 캡슐","art.note":"키아트는 자유롭게 사용하셔도 됩니다. 어떤 걸 쓸지 고민되신다면 헤더 캡슐(당황한 표정)을 대표 이미지로 써 주시면 감사하겠습니다.",
     "studio.title":"스튜디오 소개",
     "studio.p1":"Sunmint Lab은 한국의 1인 인디게임 스튜디오입니다. 시나리오, 아트, 디자인, 디렉션을 모두 개발자 한 명이 직접 맡고 있습니다.",
         "contact.title":"연락처","contact.press":"프레스 · 비즈니스","contact.demo":"데모",
@@ -386,7 +387,7 @@ const I18N = {
     "screens.title":"スクリーンショット","screens.sub":"クリックで拡大。オリジナルは1920×1080以上で、上のzipからまとめてダウンロードできます。",
     "gifs.title":"GIF","gifs.sub":"960px、自由に埋め込んでいただけます。同じクリップのMP4版はzipに同梱しています。",
     "gifs.1":"目を覚ますMora","gifs.2":"「つぶれてないから、帰らないで！！」","gifs.3":"ホーム画面のお掃除","gifs.4":"ポップアップの嵐","gifs.5":"「そんな選択肢はないよ〜」",
-    "art.title":"ロゴ・キーアート","art.logo":"ロゴ（透過）","art.header":"ヘッダーカプセル","art.library":"ライブラリカプセル",
+    "art.title":"ロゴ・キーアート","art.logo":"ロゴ（透過）","art.header":"ヘッダーカプセル","art.main":"メインカプセル","art.yt":"16:9キーアート（サムネイル用）","art.vertical":"縦型カプセル","art.note":"キーアートはご自由にお使いください。どれを使うか迷われた場合は、ヘッダーカプセル（慌てている表情）をメインにお使いいただけると嬉しいです。",
     "studio.title":"スタジオについて",
     "studio.p1":"Sunmint Labは韓国の個人インディーゲームスタジオです。シナリオ、アート、デザイン、ディレクションのすべてを開発者ひとりで手がけています。",
         "contact.title":"お問い合わせ","contact.press":"プレス・ビジネス","contact.demo":"体験版",
