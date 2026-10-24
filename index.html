@@ -405,7 +405,7 @@ function setLang(l){
   document.documentElement.lang = l;
   document.querySelectorAll('[data-i18n]').forEach(el=>{ const k=el.dataset.i18n; if(d[k]!=null) el.textContent=d[k]; });
   document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.lang===l)));
-  const T={en:{id:'Cp7aC_F0cw4',file:'trailer/WelcomeBackToAeris_DemoTrailer_EN.mp4'},ja:{id:'gDdigs7rN5k',file:'trailer/WelcomeBackToAeris_DemoTrailer_JA.mp4'}};
+  const T={en:{id:'Cp7aC_F0cw4',file:'trailer/WelcomeBackToAeris_DemoTrailer_EN.mp4'},ja:{id:'HTohPq7NYQE',file:'trailer/WelcomeBackToAeris_DemoTrailer_JA.mp4'}};
   const main = l==='ja' ? T.ja : T.en, other = l==='ja' ? T.en : T.ja;
   const f=document.getElementById('ytFrame'); const src='https://www.youtube-nocookie.com/embed/'+main.id;
   if(f && !f.src.endsWith(main.id)) f.src=src;
